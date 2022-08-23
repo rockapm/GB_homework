@@ -3,14 +3,26 @@
 // [1,4,5,3,1,2,3,9]
 // [4,45,53,31,14,25,63,19]
 
-void CreateMassive(int[] mass)   //функция создания массива
+// void CreateMassive(int[] mass)   //функция создания массива    с циклом while
+// {
+//     int length = mass.Length;     //длина массива которую мы должны принять
+//     int index = 0;
+//     while (index < length)
+//     {
+//         mass[index] = new Random().Next(1, 101);
+//         index++;
+//     }
+// }
+
+
+
+void CreateMassive(int[] mass)   //функция создания массива  с циклом for
 {
     int length = mass.Length;     //длина массива которую мы должны принять
-    int index = 0;
-    while (index < length)
+    //int index = 0;
+    for (int i = 0; i < length; i++)
     {
-        mass[index] = new Random().Next(1, 101);
-        index++;
+        mass[i] = new Random().Next(1, 101);
     }
 }
 
