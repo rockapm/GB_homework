@@ -30,7 +30,7 @@ void PrintArray(int[,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            System.Console.Write($"{arr[i, j]} ");
+            System.Console.Write($"{arr[i, j]}  ");
         }
         System.Console.WriteLine();
     }
