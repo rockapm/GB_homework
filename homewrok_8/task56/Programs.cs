@@ -29,27 +29,25 @@
 		
 		void FindMinSumRow(int[,] arr)
 		{
+
+			
 			int Sum = 0, Sum1 = 0, Sum2 = 0, Row = 0;
-			int sumrow = 0;
-			for (int i = 0; i < arr.GetLength(0); i++)
-			{
-				int minrow = 0;
-				sumrow = 0;
-				for (int j = 0; j < arr.GetLength(1); j++)
-				{
-					sumrow += arr[i,j];
-				}
-				Console.WriteLine($"Sum Row {i + 1} = {sumrow}");
-				
-				
-				if(sumrow < Sum1)
+ 
+            for(int i = 0; i < arr.GetLength(0); i++) //Проходим по циклу строк
+            {
+                Sum2 = 0;
+                for(int j = 0; j < arr.GetLength(1); j++) //Проходим по циклу столбцов
                 {   
-					Sum = sumrow; 
-					Row = i;    
+					Sum2 += arr[i, j];  //Сумма всех членов 1ой строки
+				} 
+				Console.WriteLine($"Sum Row {i + 1} = {Sum2 }");
+                if(Sum2 < Sum1)
+                {   
+					Sum = Sum2; 
+					Row = i + 1;    
 				}
                 Sum1 = Sum2;
-				
-			}
+            }
 			Console.WriteLine($"Min Row Number = {Row}");
 		}
 		
