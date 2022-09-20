@@ -3,13 +3,13 @@
 string text;
 int countLetters;
 
-string[] FirstArray(string str)
+string[] FirstArray(string str)  //преобразуем введенный текст в массив
 {
     string[] arr = str.Split(',');
     return arr;
 }
 
-void PrintArray(string[] arr)
+void PrintArray(string[] arr)  //печатаем полный массив убрав лишние пробелы
 {
     string s;
     int ii;
@@ -24,7 +24,7 @@ void PrintArray(string[] arr)
     System.Console.WriteLine();
 }
 
-void FilterArray(string[] arr)
+void FilterArray(string[] arr)  //фильтруем слова по количеству букв countLetters
 {
     //string[] res = new string[];
     string s;
@@ -43,7 +43,7 @@ void FilterArray(string[] arr)
     System.Console.WriteLine();
 }
 
-void StartProgram()
+void StartProgram() 
 {
     System.Console.WriteLine("---------------------------------");
     System.Console.WriteLine("---Enter text separated by commas:");
